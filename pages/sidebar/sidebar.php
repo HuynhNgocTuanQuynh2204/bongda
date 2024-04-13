@@ -11,6 +11,13 @@
       <span class="tooltip">Tìm kiếm</span>
     </li>
     <li>
+      <a href="index.php?quanly=loaitin">
+        <i class='bx bx-news'></i>
+        <span class="links_name">Loại tin</span>
+      </a>
+      <span class="tooltip">Loại tin</span>
+    </li>
+    <li>
       <a href="index.php?quanly=tintuc">
         <i class='bx bx-news'></i>
         <span class="links_name">Tin tức</span>

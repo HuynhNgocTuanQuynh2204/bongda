@@ -18,6 +18,23 @@ $row = mysqli_fetch_array($query);
                         <label class="form-label">Nội dung</label>
                         <textarea class="form-control" id="noidung" rows="5" style="resize: none;" name="noidung"><?php echo $row['NoiDung'] ?></textarea>
                     </div>
+                    <div class="mb-3">
+                    <?php
+                        $sql = "SELECT * FROM loaitin ORDER BY IDtin";
+                        $query = mysqli_query($mysqli,$sql);
+                        ?>
+                    <label class="form-label">Loại tin</label>
+                    <select name="loaitin" class="form-select" required>
+                        <?php
+                              while($row_tintuc = mysqli_fetch_array($query)){
+                                $selected = ($row_tintuc['IDtin'] == $row['IDtin']) ? 'selected' : '';
+                        ?>
+                        <option value="<?php echo $row_tintuc['IDtin'] ?>" selected ><?php echo $row_tintuc['TenLoaiTin'] ?></option>
+                        <?php
+                              }
+                        ?>
+                    </select>
+                </div>
                     <button type="submit" class="btn btn-primary" name="suatintuc">Sửa </button>
                 </form>
             </div>

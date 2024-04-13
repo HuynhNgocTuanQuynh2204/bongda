@@ -14,7 +14,7 @@
             <h1>Danh sách tin tức</h1>
         </section>
         <?php
-              $sql = "SELECT * FROM tintuc  ORDER BY MaTin DESC";
+              $sql = "SELECT * FROM tintuc,loaitin WHERE tintuc.IDtin = loaitin.IDtin  ORDER BY MaTin DESC";
                 $query = mysqli_query($mysqli,$sql);
         ?>
         <section class="table__body">
@@ -25,6 +25,7 @@
                         <th>ID <span class="icon-arrow"></span></th>
                         <th>Tiêu đề<span class="icon-arrow"></span></th>
                         <th>Ngày đăng<span class="icon-arrow"></span></th>
+                        <th>Loại tin<span class="icon-arrow"></span></th>
                         <th>Nội Dung<span class="icon-arrow"></span></th>
                         <th>Sửa <span class="icon-arrow"></span></th>
                         <th>Xóa<span class="icon-arrow"></span></th>
@@ -40,6 +41,7 @@
                         <td><?php echo $i; ?></td>
                         <td><?php echo $row['TieuDe']; ?></td>
                         <td><?php echo $row['NgayDang']; ?></td>
+                        <td><?php echo $row['TenLoaiTin']; ?></td>
                         <td> <a class="status pending" href="index.php?quanly=xemthemtintuc&matin=<?php echo $row['MaTin']; ?>">Xem thêm </a></td>
                         <td> <a class="status pending" href="index.php?quanly=suatintuc&matin=<?php echo $row['MaTin']; ?>">Sửa </a></td>
                         <td> <a class="status cancelled" href="index.php?quanly=xulythemtintuc&matin=<?php echo $row['MaTin']; ?>">Xóa </a></td>

@@ -34,6 +34,12 @@
                 include("main/timkiemformtintuc.php");
             }else if($tam =='timkiemformnguoidung'){
                 include("main/timkiemformnguoidung.php");
+            }else if($tam =='timkiemformloaitin'){
+                include("main/timkiemformloaitin.php");
+            }else if($tam =='loaitin'){
+                include("main/loaitin.php");
+            }else if($tam =='themloaitin'){
+                include("main/themloaitin.php");
             }else if($tam =='dudoan'){
                 include("main/dudoan.php");
             }else if($tam =='cauthu'){
@@ -50,6 +56,8 @@
                 include("main/themcauthu.php");
             }else if($tam =='suacauthu'){
                 include("main/suacauthu.php");
+            }else if($tam =='sualoaitin'){
+                include("main/sualoaitin.php");
             }else if($tam =='nguoidung'){
                 include("main/nguoidung.php");
             }else if($tam =='suatintuc'){
@@ -60,6 +68,9 @@
             }
             else if($tam =='xulythemclb'){
                 include("xuly/xulythemclb.php");
+            }
+            else if($tam =='xulythemloaitin'){
+                include("xuly/xulythemloaitin.php");
             }
             else if($tam =='xulythemcauthu'){
                 include("xuly/xulythemcauthu.php");
